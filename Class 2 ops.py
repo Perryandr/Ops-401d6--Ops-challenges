@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 
 
-# Script: Ops 401 Class 01 Part two of lab 01
+# Script: Ops 401 Class 02 Ops challenge
 # Author: Andrew P.
-# Date of lastest revision: 04/17/2023
-# Purpose: 
+# Date of lastest revision: 04/18/2023
+# Purpose: Ping an IP every few seconds.
 
 import os
 import datetime
@@ -15,15 +16,6 @@ import time
 ip_address = "8.8.8.8" 
 interval = 2 
 
-
-#!/usr/bin/env python3
-
-import os
-import datetime
-import time
-# destination IP to ping
-
-ip = '8.8.8.8'  
 
 
 
