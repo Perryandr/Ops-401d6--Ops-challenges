@@ -21,7 +21,7 @@ interval = 2
 
 while True:
     # ping the IP and capture the return code
-    ret_code = os.system(f"ping -c 1 {ip} > /dev/null 2>&1")
+    ret_code = os.system(f"ping -c 1 {ip_address} ")
     
     # evaluate the return code and assign status
     if ret_code == 0:
@@ -31,7 +31,7 @@ while True:
         
     # print the status along with timestamp and destination IP
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    print(f"{timestamp} {status} to {ip}")
+    print(f"{timestamp} {status} to {ip_address}")
     
     time.sleep(2)  # wait for 2 seconds before next ping
 
