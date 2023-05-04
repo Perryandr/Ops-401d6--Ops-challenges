@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 
-# Script: Ops 401 Class 05 Ops challenge
+# Script: Ops 401 Class 07 Ops challenge
 # Author: Andrew P.
-# Date of lastest revision: 04/26/2023
+# Date of lastest revision: 05/03/2023
 # Purpose: Encrypting and decrypting a file and folders in a path with python.
 # Thanks to classmate Alex, instructor Alex for his demo and the introduction 
 # to python help tools and practice sites, and chat.gpt to help me fix any 
@@ -61,7 +61,7 @@ def decrypt_string(key, ciphertext):
     print(decrypted.decode())
 
 
-# Encrypt the message
+# Encrypt the messages.
 encrypted_message = fernet.encrypt(message.encode())
 message ="The Princess is in another castle."
 
@@ -103,10 +103,6 @@ def main():
         decrypt_string(key, ciphertext)
     else:
         print("Invalid mode selected.")
-
-if __name__ == "__main__":
-    main()
-
 
 
 # Folder walkthrough for recursive

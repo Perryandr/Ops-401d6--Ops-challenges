@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 
 
-# Script: Ops 401 Class 12 Ops challenge
+# Script: Ops 401 Class 07 Ops challenge
 # Author: Andrew P.
-# Date of lastest revision: 05/02/2023
+# Date of lastest revision: 05/03/2023
 # Purpose: Encrypting and decrypting a file and folders in a path with python.
 # Thanks to classmate Alex, instructor Alex for his demo and the introduction 
-# to python help tools and practice sites, and chat.gpt to help me fix any 
+# to python help tools, and chat.gpt to help me fix and replace anything 
 # I messed up.
 
 import scapy.all
-import IP, ICMP, sr1, TCP
+import IP,ICMP, sr1, TCP
 import ipaddress
 import socket
 import subprocess
+
 
 # Define the function to perform the ICMP ping sweep
 def sweep(network):
@@ -137,3 +138,28 @@ while True:
         if reply == "Network": 
             IPnetwork = input("Type a CIDR block: ")
             sweep(IPnetwork)
+
+
+
+# Define a function for the port scan
+def port_scan(ip_address):
+    for port in range(1, 1025):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(0.1)
+        result = sock.connect_ex((ip_address, port))
+        if result == 0:
+            print("Port {}: Open".format(port))
+        sock.close()
+
+# Prompt the user for an IP address to target
+ip_address = input("Enter an IP address to scan: ")
+
+# Send an ICMP echo request to check if the host is responsive
+ping = subprocess.Popen(["ping", "-c", "1", ip_address], stdout=subprocess.PIPE)
+ping.wait()
+if ping.returncode == 0:
+    print("Host is online.")
+    # Call the port scan function
+    port_scan(ip_address)
+else:
+    print("Host is offline.")
