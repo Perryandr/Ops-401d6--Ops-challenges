@@ -36,6 +36,7 @@ def encrypt_file(key, filepath):
     encrypted = fernet.encrypt(data)
     os.remove(filepath)
     with open(filepath, 'wb') as f:
+    
         f.write(encrypted)
 
 def encrypt_string(key, plaintext):

@@ -1,18 +1,39 @@
 #!/usr/bin/env python3
 
 
-# Script: Ops 401 Class 11 Ops challenge
+# Script: Ops 401 Class 18 Ops challenge
 # Author: Andrew P.
-# Date of lastest revision: 05/01/2023
-# Purpose: Encrypting and decrypting a file and folders in a path with python.
-# Thanks to classmate Alex, instructor Alex for his demo and the introduction 
-# to python help tools and practice sites, and chat.gpt to help me fix any 
-# I messed up.
+# Date of lastest revision: 05/10/2023
+# Purpose: Building an automated bruteforce attack.
+# Thanks to classmate Alex, instructor Marco for his demo and the introduction 
+# to python help tools and Replit.com, and chat.gpt to help me fix any errors 
+# I created.
 
 
-
-
+# Importing libraries
 import logging
+
+# Create and configure logger
+logging.basicConfig(filename="demo.log", format='%(asctime)')
+
+# Create the logger object
+logger - logging.getLogger()
+
+
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+# Test Messages
+logger.debug()
+logger.info(msg, *args, **kwargs)
+logger.warning
+logger.error()
+logger.critical(msg, *args, **kwargs)
+
+# Import an earlier script and add logging to it
+
+# here is script from Class 11
+
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR) # to suppress warning messages from scapy
 
 from scapy.all import *
@@ -50,9 +71,4 @@ def scan_port(port):
 # Loop through each port in the range and call scan_port function
 for port in ports:
     scan_port(port)
-
-
-
-
-
 
