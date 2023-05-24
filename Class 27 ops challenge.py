@@ -10,28 +10,69 @@
 # I created.
 
 
-# Importing libraries
+
+# Import libraries
 import logging
+import logging.handlers as handler
+import time
+ 
 
-# Create and configure logger
-logging.basicConfig(filename="demo.log", format='%(asctime)')
 
-# Create the logger object
+# Logger basic configuration
+logger = logging.handler()
+
+
+# Create log file handlers
+logHandler = handler.RotatingFileHandler('')
+
+# Create
+
+
+
+# Join our logger to our loghandler
+logger.addHandler(logHandler)
+
+
+# Configure logging
+log_file = "log_file.log"
+# Maximum log file size in bytes
+
+log_max_size = 1024  
+
+# Create a rotating file handler
+file_handler = logging.handlers.RotatingFileHandler(
+    log_file,
+    maxBytes=log_max_size,
+    backupCount=3  # Number of backup log files to keep
+)
+file_handler.setLevel(logging.DEBUG)
+
+# Create a log formatter
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+file_handler.setFormatter(formatter)
+
+# Create a logger and add the file handler
 logger = logging.getLogger()
+logger.addHandler(file_handler)
 
+def divide_numbers(x, y):
+    try:
+        result = x / y
+        logging.info(f"Division successful: {x} / {y} = {result}")
+        return result
+    except ZeroDivisionError as e:
+        logging.error("Division by zero error occurred.")
+        raise e
 
-# Setting the threshold of logger to DEBUG
-logger.setLevel(logging.DEBUG)
+# Inducing an error
+try:
+    divide_numbers(10, 0)
+except ZeroDivisionError:
+    pass
 
-# Test Messages
-logger.debug()
-logger.info(msg, *args, **kwargs)
-logger.warning
-logger.error()
-logger.critical(msg, *args, **kwargs)
-
-# Import an earlier script and add logging to it
-# here is script from Class 11
+# Confirm logging
+with open(log_file, "r") as log_file:
+    print(log_file.read())
 
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR) # to suppress warning messages from scapy
 
