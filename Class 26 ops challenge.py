@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 
-# Script: Ops 401 Class 18 Ops challenge
+# Script: Ops 401 Class 26 Ops challenge
 # Author: Andrew P.
-# Date of lastest revision: 05/10/2023
+# Date of lastest revision: 05/22/2023
 # Purpose: Building an automated bruteforce attack.
-# Thanks to classmate Alex, instructor Marco for his demo and the introduction 
+# Thanks to classmate Marco, instructor Marco for his demo and the introduction 
 # to python help tools and Replit.com, and chat.gpt to help me fix any errors 
 # I created.
 
