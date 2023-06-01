@@ -3,11 +3,11 @@
 
 # Script: Ops 401 Class 33 Ops challenge
 # Author: Andrew P.
-# Date of lastest revision: 05/30/2023
+# Date of lastest revision: 06/01/2023
 # Thanks to instructor Marco for his demo and the introduction 
 # to python help tools and Replit.com, and chat.gpt to help me fix any errors 
 # I created.
-# Also thank you to Alex and Sierra for helping me with python3.
+# Also thank you to Alex and Sierra for helping me with python3 challenge, I struggled dearly.
 
 # Imports
 
