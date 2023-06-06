@@ -10,7 +10,7 @@
 # Also thank you to Alex and Sierra for helping me with python3 challenge, I struggle dearly.
 
 # Import Libraries.
-import os.system()
+import os, sys, time, telnetlib, signal
 import subprocess
 import socket
 
