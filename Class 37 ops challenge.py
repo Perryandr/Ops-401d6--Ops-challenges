@@ -29,7 +29,7 @@ new_response = requests.get(targetsite, cookies=cookie)
 
 # - Generate a .html file to capture the contents of the HTTP response
 page = new_response.text
-with open(r'C:\Users\maldo\OneDrive\Documents\Github\Ops-401\Code\cookie.html', 'w') as file:
+with open(r'C:\Users\deadl\OneDrive\Documents\Github\Ops-401\Code\cookie.html', 'w') as file:
     file.write(page)
     
 # - Open it with Firefox
